@@ -52,15 +52,11 @@ function controlColours() {
 			console.log("Something went wrong, colour not changed.");
 	}
 
-	// document.cookie = "c1 = wowowwowowowowo; path = /game.html";
-	document.cookie = "c1 = wowowwowowowowo;";
-	// document.cookie = "c1 = " + c1.backgroundColor;
-	// document.cookie = "c2 = " + c2.backgroundColor;
-	// document.cookie = "c3 = " + c3.backgroundColor;
-	let x = document.cookie;
-	console.log("Cookie -- " + x);
+	document.cookie = "c1 = " + c1.backgroundColor;
+	document.cookie = "c2 = " + c2.backgroundColor;
+	document.cookie = "c3 = " + c3.backgroundColor;
+	console.log("Cookies\n" + document.cookie);
 	console.log("Scheme set: " + scheme.value);
-	// return ("" + scheme.value);
 }
 
 // Set the colours of player names based on the selected colour scheme
