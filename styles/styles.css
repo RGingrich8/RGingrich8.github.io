@@ -1,0 +1,152 @@
+body {
+	background-color: black;
+}
+
+body p {
+	text-align: center;
+	color: white;
+	font-family: Verdana;
+	/*text-decoration: none;*/
+}
+
+a {
+	text-decoration: none;
+}
+
+#homepage {
+	text-align: center;
+}
+
+#home_title {
+	font-size: 350%;
+	text-decoration: underline dotted;
+	text-decoration-color: white;
+}
+
+#logo {
+	height: 100px;
+	background-color: white;
+}
+
+.start_menu {
+	width: 40%;
+	font-size: 200%;
+	margin-left: 30%;
+}
+
+.start_menu:hover {
+	background-color: #1D7FE4;
+	cursor: pointer;
+}
+
+#colour_scheme {
+	margin-left: 40%;
+	font-size: 50px;
+	color: gold;
+	border: 0px;
+	background-color: black;
+	text-align: center;
+}
+
+#format_colours {
+	
+}
+
+#c1 {
+	background-color: rgb(235, 50, 50);
+	height: 50px;
+	width: 50px;
+	border: 2px solid white;
+	border-radius: 25%;
+}
+
+#c2 {
+	background-color: rgb(50, 235, 50);
+	height: 50px;
+	width: 50px;
+	border: 2px solid white;
+	border-radius: 25%;
+}
+
+#c3 {
+	background-color: rgb(50, 50, 235);
+	height: 50px;
+	width: 50px;
+	border: 2px solid white;
+	border-radius: 25%;
+}
+
+option {
+	border: 0px;
+	color: gold;
+}
+
+input {
+	text-align: center;
+}
+
+#score {
+	text-align: center;
+	font-size: 150%;
+	color: white;
+	margin-bottom: 50px;
+}
+
+#score p1 {
+	text-decoration: underline dotted;
+	text-decoration-color: white;
+	font-size: 120%;
+	/*padding-bottom: 20px;*/
+}
+
+#score p2 {
+	padding: 10px;
+}
+
+#gameboard {
+	display: grid;
+	grid-template-columns: 4;
+	grid-template-rows: 4;
+	grid-auto-flow: column dense;
+	justify-content: space-evenly;
+	gap: 120px;
+	width: 50%;
+	margin: auto;
+}
+
+.dot {
+	background-color: grey; 
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+}
+
+#d11 {
+	grid-column-start: 1;
+}
+
+#d21 {
+	grid-row-start: 2;
+}
+
+#d31 {
+	grid-row-start: 3;
+}
+
+#d41 {
+	grid-row-start: 4;
+}
+
+#controls {
+	padding-bottom: 10px;
+	width: auto;
+}
+
+#controls a:hover {
+	background-color: white;
+	cursor: pointer;
+}
+
+
+USE THIS FOR HOVERING AVAILABLE LINES TO PLACE
+cursor: crosshair;
