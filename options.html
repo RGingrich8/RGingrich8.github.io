@@ -14,11 +14,12 @@
 
 	<!-- <script type="text/javascript" src="./scripts/index.js"></script> -->
 
-	<p>SETTINGS</p>
+	<p class = "title">SETTINGS</p>
+	<hr>
 
 	<!-- Allow for changing of the colours used by players in-game -->
 	<div id = "select_colour">
-		<p>COLOUR SCHEME</p>
+		<!-- <p>COLOUR SCHEME</p> -->
 		<!-- <label for="colour_scheme">COLOUR SCHEME</label> -->
 		<select id = "colour_scheme" required onchange="controlColours()">
 			<option value="rgb">RGB (Default)</option>
@@ -28,14 +29,17 @@
 			<option value="sunrise">Sunrise</option>
 			<option value="forest">Forest</option>
 		</select>
+	
+
+		<!-- These are changed based on what the user selects -->
+		<div id = "format_colours">
+			<div id = "c1"></div>
+			<div id = "c2"></div>
+			<div id = "c3"></div>
+		</div>
 	</div>
 
-	<!-- These are changed based on what the user selects -->
-	<div id = "format_colours">
-		<div id = "c1"></div>
-		<div id = "c2"></div>
-		<div id = "c3"></div>
-	</div>
+	<hr>
 	
 	<!-- <div id = "format_names">
 		<p>PLAYER 1 NAME</p>
@@ -49,9 +53,11 @@
 
 
 
-
-	<a href="./game.html" id = "start"><p>START GAME</p></a>
-	<a href="./index.html"><p>MAIN MENU</p></a>
+	<div class="controls">
+		<a href="./game.html"><p>START GAME</p></a>
+		<a href="./index.html"><p>MAIN MENU</p></a>
+	</div>
+	
 
 	<!-- Set further down, let rest of page load first -->
 	<script type="text/javascript" src="./scripts/index.js"></script>
