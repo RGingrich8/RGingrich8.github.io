@@ -1,6 +1,7 @@
 // Global Var Setup
 const NO_OF_LINES = 24;
 
+// let firstTimeSetup = true;
 let playerTurn = 1;
 let p1Score = 0;
 let p2Score = 0;
@@ -22,6 +23,14 @@ main();
 // Control Flow
 function main() {
 	console.log("index.js - loaded successfully.");
+	
+	// Set up cookies on homepage
+	if (window.location.pathname.includes("index.html")) {
+		document.cookie = "c1 = " + "rgb(235, 50, 50)";
+		document.cookie = "c2 = " + "rgb(50, 235, 50)";
+		document.cookie = "c3 = " + "rgb(50, 50, 235)";
+		// document.cookie = "firstTimeSetup = " + false;
+	}
 	
 	// Only attempt to do this if on the game page
 	if (window.location.pathname.includes("game.html")) {
