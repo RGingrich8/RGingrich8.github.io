@@ -139,7 +139,6 @@ option {
 	justify-content: space-evenly;
 	gap: 120px;
 	width: 360px;
-	aspect-ratio: 1/1;
 	margin: auto;
 }
 
@@ -157,14 +156,15 @@ option {
 	width: 120px; 
 	height: 15px;
 	background-color: black;
+	/* position: relative; */
 }
 
 .vline {
 	z-index: 0;
-	margin-top: 15%;
+	margin-top: 27%;
 	margin-left: 20%;
 	/* width: 2px;  */
-	height: 120px;
+	height: 125px;
 	background-color: black;
 }
 
@@ -176,4 +176,11 @@ option {
 .vline:hover {
 	background-color: #d9d9d9;
 	cursor: crosshair;
+}
+
+#up_next {
+	width: 50px;
+	height: 50px;
+	background-color: white;
+	margin: 50px auto auto auto;
 }

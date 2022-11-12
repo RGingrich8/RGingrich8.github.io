@@ -9,8 +9,10 @@ let p3Score = 0;
 let unclaimedLines = [];
 let usedLines = [];
 
-let availSets = new Array(["h0", "h3", "v0", "v1"], ["h1", "h4", "v1", "v2"], [], [], [], [], [], [], []);
-
+// ADD A LOOP TO DO THIS!!!!!!!!!!
+let availSets = new Array(["h0", "h3", "v0", "v1"], ["h1", "h4", "v1", "v2"], ["h2", "h5", "v2", "v3"], 
+				["h3", "h6", "v4", "v5"], ["h4", "h7", "v5", "v6"], ["h5", "h8", "v6", "v7"], 
+				["h6", "h9", "v8", "v9"], ["h7", "h10", "v9", "v10"], ["h8", "h11", "v10", "v11"]);
 
 // Run
 main();
@@ -89,10 +91,11 @@ function controlColours() {
 // Grabs the colour scheme from cookies
 function colourSetup() {
 	
-	console.log("Player colours set correctly.");
 	document.getElementById("p1").style.color = (document.cookie.split(";")[0]).split("=")[1];
 	document.getElementById("p2").style.color = (document.cookie.split(";")[1]).split("=")[1];
 	document.getElementById("p3").style.color = (document.cookie.split(";")[2]).split("=")[1];
+
+	document.getElementById("up_next").style.backgroundColor = (document.cookie.split(";")[0]).split("=")[1];
 	
 }
 
@@ -117,46 +120,53 @@ function initLines() {
 	}
 }
 
+
+
 // Game logic, etc
 function placement(event) {
 	
-	// Used to check all conditions of moving onto the next player's turn
+	// Used to check all conditions before moving onto the next player's turn
 	let moveOn = true;
 
 	// Set current player's colour
-	let currColour = "black"; 	// Default
+	let currColour = "black"; 									// Default
+	let next = document.getElementById("up_next").style;		// Indicator at bottom for whose is up next
 
 	// Set colour based on player's turn
 	if (playerTurn == 1) {
 		currColour = document.cookie.split(";")[0].split("=")[1];
+		next.backgroundColor = document.cookie.split(";")[1].split("=")[1];
 	} else if (playerTurn == 2) {
 		currColour = document.cookie.split(";")[1].split("=")[1];
+		next.backgroundColor = document.cookie.split(";")[2].split("=")[1];
 	} else {
 		currColour = document.cookie.split(";")[2].split("=")[1];
+		next.backgroundColor = document.cookie.split(";")[0].split("=")[1];
 	}
-	
+
 	// Check if valid move
 	if (!usedLines.includes(this.id)) {
 		document.getElementById(this.id).style.backgroundColor = currColour;
 		usedLines.push(this.id);
 		
-		// Check if a square completed
-		// document.getElementById("p" + playerTurn).setAttribute("Player " + playerTurn + ": " + p1Score)
-		if (checkPoint()) {
+		// Check if square(s) completed
+		let turnScore = checkPoint();
+
+		// If yes, increase score
+		if (turnScore > 0) {
 			moveOn = false;
-			incScore(playerTurn);
+			next.backgroundColor = document.cookie.split(";")[playerTurn - 1].split("=")[1]; // Keep indicator unchanged
+			incScore(playerTurn, turnScore);
 		}
 
 		// Check if all lines have been used
 		if (usedLines.length == NO_OF_LINES) {
 			moveOn = false;
-			// let sortScores = new Array(p1Score, p2Score, p3Score).sort();
-			alert("Game over!");
+			alert("Game over! The winner is " + checkWinner() + "! The game will now reset.");
 			document.location.reload();
-			// document.createElement()
 		}
 
-		// If all of the above false, move on to next turn
+		// If each of the above is false, move on to next turn
 		if (moveOn) {
 			playerTurn++;
 			if (playerTurn > 3) {
@@ -171,58 +181,54 @@ function placement(event) {
 
 
 // Check if an available square has been completed
+// Updated: check for multiple square completion
 function checkPoint() {
 	
-	let found = false;
+	let totalPoints = 0;
 
-	console.log(usedLines[usedLines.length - 1]);
-	for (let x = 0; x < availSets.length; x++) {
+	// console.log(usedLines[usedLines.length - 1]);
+	for (let x = 0; x < availSets.length; x++) {						// Iterate through all possible sets
 		if (availSets[x].includes(usedLines[usedLines.length - 1])) { 	// If most recently added line is in that set...
-			let y = 0;
-			while (y < availSets[x].length) {
-				if (usedLines.includes(availSets[x][y])) {
-					found = true;
-				} else {
-					found = false;
-					break;
-				}
-				y++;
+			if (usedLines.includes(availSets[x][0]) && usedLines.includes(availSets[x][1]) && usedLines.includes(availSets[x][2]) && usedLines.includes(availSets[x][3])) {
+				totalPoints++;
 			}
-			// if (usedLines.includes(availSets[x][0]) && usedLines.includes(availSets[x][1]) && usedLines.includes(availSets[x][2]) && usedLines.includes(availSets[x][3])) {
-			// 	console.log("LOOOL");
-			// 	return true;
-			// } else {
-			// 	console.log("AWWWW");
-			// 	return false;
-			// }
 		}
 	}
 
-	
-	// availSets.remove(the found one);
-	if (found) {
-		console.log("FOUND IT");
-		return true;
-	} else {
-		return false;
-	}
+	return totalPoints;
 }
 
 
 
 // Simple function to increase a player's points and update HTML document
-function incScore(player) {
+function incScore(player, amount) {
 	
 	if (player == 1) {
-		p1Score++;
+		p1Score += amount;
 	} else if (player == 2) {
-		p2Score++;
+		p2Score += amount;
 	} else {
-		p3Score++;
+		p3Score += amount;
 	}
 
-	document.getElementById("p1").setAttribute("value", "Player 1: " + p1Score);
-	document.getElementById("p2").setAttribute("value", "Player 2: " + p2Score);
-	document.getElementById("p3").setAttribute("value", "Player 3: " + p3Score);
+	document.getElementById("p1").textContent = "Player 1: " + p1Score;
+	document.getElementById("p2").textContent = "Player 2: " + p2Score;
+	document.getElementById("p3").textContent = "Player 3: " + p3Score;
 
+}
+
+
+
+// Simple function to see whose score was highest
+function checkWinner() {
+	
+	if (p1Score > p2Score && p1Score > p3Score) {
+		return "Player 1 with a score of " + p1Score;
+	} else if (p2Score > p1Score && p2Score > p3Score) {
+		return "Player 2 with a score of " + p2Score;
+	} else if (p1Score == p2Score || p2Score == p3Score || p1Score == p3Score) {
+		return "nobody, it's a draw";
+	} else {
+		return "Player 3 with a score of " + p3Score;
+	}
 }
