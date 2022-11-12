@@ -25,7 +25,7 @@ function main() {
 	console.log("index.js - loaded successfully.");
 	
 	// Set up cookies on homepage
-	if (!(window.location.pathname.includes("options.html")) && !(window.location.pathname.includes("game.html"))) {
+	if (window.location.pathname.includes("index.html") || !(window.location.pathname.includes("/"))) {
 		console.log("Haha");
 		document.cookie = "c1 = " + "rgb(235, 50, 50)";
 		document.cookie = "c2 = " + "rgb(50, 235, 50)";
