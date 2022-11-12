@@ -1,5 +1,7 @@
 // Global Var Setup
 const NO_OF_LINES = 24;
+const URL = "https://rgingrich8.github.io/";
+const URL_ALT = "rgingrich8.github.io";
 
 // let firstTimeSetup = true;
 let playerTurn = 1;
@@ -25,7 +27,8 @@ function main() {
 	console.log("index.js - loaded successfully.");
 	
 	// Set up cookies on homepage
-	if (window.location.pathname.includes("index.html") || !(window.location.pathname.includes("/"))) {
+	// if (window.location.pathname.includes("index.html") || !(window.location.pathname.includes("/"))) {
+	if (window.location.href == URL || window.location.href == URL_ALT || window.location.href == URL + "index.html") {
 		console.log("Haha");
 		document.cookie = "c1 = " + "rgb(235, 50, 50)";
 		document.cookie = "c2 = " + "rgb(50, 235, 50)";
