@@ -1,6 +1,7 @@
 # Richard Gingrich - Public Website
 Richard Gingrich's personal website, for potential employers to learn more about me. Enjoy! <br>
 This project does not require a README, but uses the blueprint of how I usually set-up my README files. <br>
+The real README files are far more detailed. <br>
 
 ## System Requirements
 A generally up-to-date browser is required to experience the pages as they were meant to be viewed.
