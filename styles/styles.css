@@ -1,18 +1,14 @@
-#col_change {
-    background-color: black;
-    width: 50px;
-    height: 50px;
-    border-radius: 25%;
-}
+/* #col_change {
+} */
 
-p {
+#introduction {
     background-color: black;
 }
 
-body {
-    background-color: black;
+#projects {
+    background-color: white;
 }
 
 footer {
-    background-color: black;
+    background-color: #bf1531;
 }
