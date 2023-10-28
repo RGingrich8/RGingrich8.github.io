@@ -1,12 +1,15 @@
-/* #col_change {
-} */
+body {
+    background-color: black;
+}
 
 #introduction {
     background-color: black;
+    color: white;
 }
 
 #projects {
     background-color: white;
+    color: black;
 }
 
 footer {
@@ -27,7 +30,7 @@ footer {
     padding-left: 3%;
     padding-right: 3%;
     text-decoration: none;
-    font-size: 500%;
+    font-size: 5pc; /* CHANGE THIS */
     color: white;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -36,4 +39,17 @@ footer {
 .header-link:hover {
     color: black;
     background-color: white;
+}
+
+#table-projects {
+    background-color: white;
+    color: black;
+}
+
+#table-keys {
+    background-color: aliceblue;
+}
+
+table a {
+    text-decoration: none;
 }
