@@ -1,34 +1,30 @@
 body {
     background-color: black;
-    width: 100%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: none;
 }
 
 #introduction {
     background-color: black;
     color: white;
-    width: 100%;
 }
 
 #projects {
     background-color: white;
     color: black;
-    width: 100%;
 }
 
 footer {
-    background-color: #bf1531;
+    background-color: #03f0fc;
 }
 
 #header {
     width: 100%;
     height: 10%;
-    margin-top: 2%;
     opacity: 85%;
-    background-color: #bf1531;
+    background-color: #03f0fc;
     text-align: center;
     position: relative;
-}
+} 
 
 .header-link {
     padding-left: 3%;
@@ -37,12 +33,14 @@ footer {
     font-size: 5pc; /* CHANGE THIS */
     color: white;
     font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    z-index: 0;
 }
 
 .header-link:hover {
     color: black;
     background-color: white;
+    cursor: none;
 }
 
 #table-projects {
@@ -56,4 +54,33 @@ footer {
 
 table a {
     text-decoration: none;
+}
+
+#text-intro {
+    font-size: 20vh;
+    vertical-align: middle;
+    animation-delay: 0.25s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-name: moveLeft;
+}
+
+/* Fix this */
+#text-intro img {
+    width: 5vw;
+    height: 5vh;
+}
+
+@keyframes moveLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+}
+
+#mouse_basic {
+    height: 18px;
+    width: 14px;
+    position: relative;
+    z-index: 1;
 }

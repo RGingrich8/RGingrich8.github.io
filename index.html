@@ -8,8 +8,11 @@
     </head>
 
 
-    <body>
-        <div id="scroll-bar"></div>
+    <body onmousemove="mouseLogic(event)">
+        
+        <img class="mouse" id="mouse_basic" src="./images/mouse_basic.png">
+        
+        <!-- <div id="scroll-bar"></div> -->
 
         <div id = "header">
             <a class = "header-link" href = "#introduction">Introduction
@@ -20,10 +23,17 @@
             </a>
         </div>
 
+        
+
         <div id="introduction">
+            <div id="text-intro">
+                <p id="text-intro">Hello!</p>
+                <img src="./images/icon.png">
+            </div>    
+
             <p>To whom it may interest,
 
-                My name is Richard Gingrich and I am a graduate from the University of Calgary, obtaining a BSc in Computer Science.
+                My name is Richard Gingrich and I am a graduate from the University of Calgary, recently obtaining a BSc in Computer Science.
                 
                 I am passionate about (CPSC passions here). Web design (UI/UX) is something I have also dabbled in and have found to be quite 
                 creative and enjoyable.
