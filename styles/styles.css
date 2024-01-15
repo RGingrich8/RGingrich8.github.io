@@ -1,3 +1,8 @@
+/* * {
+    margin: 0px;
+    padding: 0px;
+} */
+
 body {
     background-color: black;
     cursor: none;
@@ -63,9 +68,11 @@ table a {
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
     animation-name: moveLeft;
+    display: flex;
+	flex-direction: row;
+	justify-content: center; 
 }
 
-/* Fix this */
 #text-intro img {
     width: 5vw;
     height: 5vh;
@@ -83,4 +90,20 @@ table a {
     width: 14px;
     position: relative;
     z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+#projects-overlay {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.project {
+    height: 10vw;
+}
+
+#project-2 {
+    width: 1vw;
 }
