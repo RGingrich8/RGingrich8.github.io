@@ -1,35 +1,27 @@
-/* * {
-    margin: 0px;
-    padding: 0px;
-} */
+/* Body and Misc */
+
+a:hover {
+    cursor: none;
+}
 
 body {
     background-color: black;
     cursor: none;
     width: 100vw;
+    
 }
 
-#introduction {
-    background-color: black;
-    color: white;
-    /* max-width: 100vw; */
+#mouse_basic {
+    height: 18px;
+    width: 14px;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
 }
 
-hr {
-    width: 40vw;
-    /* background-color: orange;
-    color: orange; */
-    border: 1px solid orange;
-    margin-top: 5vh;
-}
 
-footer {
-    background-color: #03f0fc;
-}
-
-footer a:hover {
-    cursor: none;
-}
+/* Header and Intro Sections */
 
 #header {
     width: 100%;
@@ -55,31 +47,27 @@ footer a:hover {
 }
 
 .header-link:hover {
-    /* color: black; */
-    /* background-color: white; */
-    /* filter: brightness(150%); */
     color: orange;
-    cursor: none;
 }
 
-#table-projects {
-    background-color: white;
-    color: black;
+hr {
+    width: 40vw;
+    /* background-color: orange;
+    color: orange; */
+    border: 1px solid orange;
+    margin-top: 5vh;
 }
 
-#table-keys {
-    background-color: aliceblue;
-}
-
-table a {
-    text-decoration: none;
+#introduction {
+    color: white;
+    max-width: 100vw;
 }
 
 #text-intro {
     font-size: 20vh;
     vertical-align: middle;
     animation-delay: 0.25s;
-    animation-duration: 1.5s;
+    animation-duration: 3.5s;
     animation-fill-mode: forwards;
     animation-name: moveLeft;
     display: flex;
@@ -91,13 +79,6 @@ table a {
     background-size: 30%;
 }
 
-/* #text-intro img {
-    position: absolute;
-    size: 30%;
-    filter: brightness(50%);
-    z-index: 0;
-} */
-
 @keyframes moveLeft {
     0% {
         opacity: 0;
@@ -105,29 +86,30 @@ table a {
     }
 }
 
-#mouse_basic {
-    height: 18px;
-    width: 14px;
-    position: relative;
-    z-index: 1;
-    margin: 0;
-    padding: 0;
-}
 
-#projects {
-    background-color: white;
-    color: black;
-}
+/* Projects */
 
 #projects-overlay {
     display: flex;
     flex-direction: column;
     /* flex: 1 1 100%; */
     justify-content: left;
-    border: solid 2px orange;
+    /* border: solid 2px orange; */
     padding: 0px;
     margin: 0px;
-    max-width: 100vw;
+    width: 100vw;
+}
+
+.arrow {
+    font-size: 60px;
+    color: orange;
+    background-color: #03f0fc;
+    width: 10vw;
+    /* align-items: center; */
+}
+
+.project-name {
+    color: orange;
 }
 
 .project {
@@ -135,10 +117,34 @@ table a {
     height: 50vh;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .project:hover {
-    filter: contrast(40%);
+    filter: contrast(80%);
+}
+
+.project p {
+    opacity: 0;
+    /* align-items: center; */
+}
+
+.project:hover p {
+    animation-delay: 0.25s;
+    animation-duration: 1.0s;
+    animation-fill-mode: forwards;
+    animation-name: appear;
+}
+
+@keyframes appear {
+    25% {
+        opacity: 100;
+    }
+    100% {
+        opacity: 100;
+    }
 }
 
 #project-1 {
@@ -155,4 +161,27 @@ table a {
 
 #project-4 {
     background-image: url("../images/test2.jpg");
+}
+
+#project-5 {
+    background-image: url("../images/test2.jpg");
+}
+
+#project-6 {
+    background-image: url("../images/test2.jpg");
+}
+
+.project-row {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #03f0fc;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5vh;
 }

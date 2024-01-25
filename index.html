@@ -9,6 +9,7 @@
     </head>
 
 
+    <!-- onscroll="mouseScroll()" -->
     <body onmousemove="mouseLogic(event)">
         
         <!-- Small script, load first -->
@@ -22,7 +23,7 @@
         <div id = "header">
             <a class = "header-link" href = "#introduction">Introduction
             </a>
-            <a class = "header-link" href = "#projects">Projects
+            <a class = "header-link" href = "#projects-overlay">Projects
             </a>
             <a class = "header-link" href = "#contact">Contact Information
             </a>
@@ -62,42 +63,41 @@
             </p>
         </div>
 
+        <!-- <hr> -->
+
         <div id="projects-overlay">
             
-            <div id="projects-row-1">
+            <div class="project-row">
                 <!-- For each of these, do `onhover=popuptext(this.name)` which will cause the description text to fade in -->
                 <div class="project" id="project-1">
+                    <h1 class="project-name">VALORANT DUOFINDER</h1>
                     <p>Test 1</p>
-                    <!-- <img src="./images/test.jpeg"> -->
+                    <p class="arrow"> > </p>
+                    <!-- <img src="./images/arrow.png" -->
                 </div>
 
                 <div class="project" id="project-2">
                     <p>Test 2</p>
-                    <!-- <img src="./images/test2.jpg"> -->
                 </div>
             </div>
 
-            <div id="projects-row-2">
+            <div class="project-row">
                 <div class="project" id="project-3">
                     <p>Test 3</p>
-                    <!-- <img src="./images/test.jpeg"> -->
                 </div>
 
                 <div class="project" id="project-4">
                     <p>Test 4</p>
-                    <!-- <img src="./images/test2.jpg"> -->
                 </div>
             </div>
 
-            <div id="projects-row-3">
+            <div class="project-row">
                 <div class="project" id="project-5">
                     <p>Test 3</p>
-                    <!-- <img src="./images/test.jpeg"> -->
                 </div>
 
                 <div class="project" id="project-6">
                     <p>Test 4</p>
-                    <!-- <img src="./images/test2.jpg"> -->
                 </div>
             </div>
 
@@ -130,6 +130,8 @@
 			</table> -->
         </div>
         
+        <hr>
+
         <footer id="contact">
             <p>Phone number (Canada): </p>
             <p>Email: </p>
