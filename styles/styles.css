@@ -43,13 +43,11 @@ body {
     padding-left: 3%;
     padding-right: 3%;
     text-decoration: none;
-    font-size: 4vh; /* CHANGE THIS */
+    font-size: 4vh;
     color: white;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    z-index: 0;
-    /* text-decoration: 2px underline white; */
-
+    /* z-index: 0; */
 }
 
 .header-link:hover {
@@ -58,8 +56,6 @@ body {
 
 hr {
     width: 40vw;
-    /* background-color: orange;
-    color: orange; */
     border: 1px solid orange;
     margin-top: 5vh;
 }
@@ -104,32 +100,48 @@ hr {
     flex-direction: column;
     /* flex: 1 1 100%; */
     justify-content: left;
-    /* border: solid 2px orange; */
     padding: 0px;
     margin: 0px;
     width: 100vw;
 }
 
 .arrow {
-    font-size: 60px;
+    font-size: 4vw;
+    font-weight: lighter;
     color: orange;
     border: 2px solid orange;
     border-radius: 50%;
     background-color: black;
     width: 5vw;
     text-align: center;
-    /* min-width: 2vw; */
 }
 
 .arrow:hover {
     background-color: orange;
     color: black;
-    /* filter: invert(); */
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 7vh;
+}
+
+.yt {
+    height: 10vh;
+    padding: 0vh 2vw;
+}
+
+.yt:hover {
+    filter: invert();
 }
 
 .project-name {
     color: orange;
     filter: drop-shadow(2px 3px black);
+    font-size: 5vh;
+    font-weight: bold;
 }
 
 .project {
@@ -150,8 +162,9 @@ hr {
 
 .project p {
     opacity: 0;
-    /* align-items: center; */
-    /* text-align: center; */
+    font-size: 2vh;
+    font-weight: bold;
+    color: white;
 }
 
 .project:hover p {
@@ -213,4 +226,5 @@ footer {
     flex-direction: row;
     margin-top: 5vh;
     justify-content: center;
+    padding: 2vh 0vw;
 }
