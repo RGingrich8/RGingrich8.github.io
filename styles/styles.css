@@ -105,7 +105,7 @@ hr {
     width: 100vw;
 }
 
-.arrow {
+/* .arrow {
     font-size: 4vw;
     font-weight: lighter;
     color: orange;
@@ -119,13 +119,13 @@ hr {
 .arrow:hover {
     background-color: orange;
     color: black;
-}
+} */
 
 .links {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 7vh;
+    padding-top: 20vh;
 }
 
 .yt {
@@ -140,8 +140,9 @@ hr {
 .project-name {
     color: orange;
     filter: drop-shadow(2px 3px black);
-    font-size: 5vh;
-    font-weight: bold;
+    font-size: 4vh;
+    /* font-weight: bolder; */
+    max-width: 50vw;
 }
 
 .project {
@@ -163,8 +164,10 @@ hr {
 .project p {
     opacity: 0;
     font-size: 2vh;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: white;
+    max-width: 50vw;
+    margin-top: 5vh;
 }
 
 .project:hover p {
