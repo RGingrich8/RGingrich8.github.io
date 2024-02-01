@@ -12,6 +12,9 @@ function main() {
     console.log("JS loaded successfully.");
 }
 
+
+// Custom cursor code below, currently not used
+
 // Mouse Movement and Behaviour
 function mouseLogic(event) {
     // console.log("Real Mouse Position, X: " + event.pageX + " Y: " + event.pageY);
@@ -23,11 +26,16 @@ function mouseLogic(event) {
 }
 
 // Mouse scroll logic, unfinished
-// function mouseScroll() {
-//     // console.log(document.documentElement.scrollTop);
-//     let mouse = document.getElementById("mouse_basic");
-//     let calc = document.documentElement.scrollTop + globalY;
-//     console.log("Calc: " + calc + " GlobalY: " + globalY);
-//     mouse.style.left = globalX + "px";
-//     mouse.style.top = calc + "px";
-// }
+function mouseScroll() {
+    // console.log(document.documentElement.scrollTop);
+    let mouse = document.getElementById("mouse_basic");
+    let calc = document.documentElement.scrollTop + globalY;
+    console.log("Calc: " + calc + " GlobalY: " + globalY);
+    mouse.style.left = globalX + "px";
+    mouse.style.top = calc + "px";
+}
+
+// Detect if the real mouse has hovered over the custom cursor
+function detectHover() {
+    console.log("Collision detected.");
+}

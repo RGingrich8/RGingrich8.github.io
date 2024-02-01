@@ -9,23 +9,21 @@
     </head>
 
 
-    <!-- onscroll="mouseScroll()" -->
-    <body onmousemove="mouseLogic(event)">
+    <!-- For custom cursor: body onmousemove="mouseLogic(event)" -->
+    <body>
         
         <!-- Small script, load first -->
         <script type="text/javascript" src="./scripts/index.js"></script>
         
-        <img class="mouse" id="mouse_basic" src="./images/mouse_basic.png">
-        
+        <!-- <img class="mouse" id="mouse_basic" src="./images/mouse_basic.png" onmouseenter="detectHover()"> -->        
         <!-- <div id="scroll-bar"></div> -->
 
-        <!-- onmouseenter = invert custom mouse's colour -->
         <div id = "header">
-            <a class = "header-link" href = "#introduction">Introduction
+            <a class = "header_link" href = "#introduction">Introduction
             </a>
-            <a class = "header-link" href = "#projects-overlay">Projects
+            <a class = "header_link" href = "#projects_overlay">Projects
             </a>
-            <a class = "header-link" href = "#contact">Contact Information
+            <a class = "header_link" href = "#contact">Contact Information
             </a>
         </div>
 
@@ -34,47 +32,51 @@
         
 
         <div id="introduction">
-            <div id="text-intro">
+            <div id="text_intro">
                 <p>Hello!</p>
                 <!-- <img src="./images/icon_large.png"> -->
             </div>  
             
             <hr>
+        </div>
 
-            <p> <p style="color:orange">Whom it may interest,</p> <br>
+        <div id="about_me">
+            <div>
+                <p> 
+                    <p style="color:orange">Whom it may interest,</p> <br>
 
-                My name is Richard Gingrich and I am a graduate from the University of Calgary, recently obtaining a BSc in Computer Science. <br>
-                
-                I am passionate about (CPSC passions here). Web design (UI/UX) is something I have also dabbled in and have found to be quite 
-                creative and enjoyable. <br>
-                Another thing I am passionate about is travel, and since my trip to Thailand in early 2023 it has been a dream of mine to move <br>to and work (either remote or not) 
-                in Thailand. For me, salary is not the most important aspect of my dream (replace???) job. Rather, it is most important to
-                me that I feel like I am contributing something of value and working on projects that are fulfilling.
-                It is not the amount of money that is a deciding factor on my end. In that sense, I am willing to take a lower salary if the job I am accepting allows
-                me to feel fulfilled. 
+                    My name is Richard Gingrich and I am a graduate from the University of Calgary, recently obtaining a BSc in Computer Science. <br>
 
-                <br>
+                    I am passionate about (CPSC passions here). Web design (UI/UX) is something I have also dabbled in and have found to be quite 
+                    creative and enjoyable. <br>
+                    Another thing I am passionate about is travel, and since my trip to Thailand in early 2023 it has been a dream of mine to move <br>to and work (either remote or not) 
+                    in Thailand. For me, salary is not the most important aspect of my dream (replace???) job. Rather, it is most important to
+                    me that I feel like I am contributing something of value and working on projects that are fulfilling.
+                    It is not the amount of money that is a deciding factor on my end. In that sense, I am willing to take a lower salary if the job I am accepting allows
+                    me to feel fulfilled. 
 
+                    <br>
+                    <br>
 
-                My CPSC resume can be found <a href="">here</a> <br>
-                A copy of my general resume <a href="">here</a> <br>
+                    My CPSC resume can be found <a href="">here</a> <br>
+                    A copy of my general resume <a href="">here</a> <br>
 
-                <p style="color:orange">Please enjoy some of my projects below!</p>
-            </p>
+                    <p style="color:orange">Please enjoy some of my projects below!</p>
+                </p>
+            </div>
 
-            <!-- Put professional image here, decorate with orange border -->
-            <!-- <img src="./images/foxbot.png"> -->
+            <div id="personal_pic"></div>
         </div>
 
         <hr>
         <br>
 
-        <div id="projects-overlay">
+        <div id="projects_overlay">
             
-            <div class="project-row">
+            <div class="project_row">
                 
-                <div class="project" id="project-1">
-                    <h1 class="project-name">VALORANT DUOFINDER</h1>
+                <div class="project" id="project_1">
+                    <h1 class="project_name">VALORANT DUOFINDER</h1>
                     <p>A VERY COOL VALORANT THING AND THIS IS THE DESCRIPTION LOL</p>
                     <div class="links">
                         <!-- <a href=""><h2 class="arrow"> > </h2></a> -->
@@ -83,8 +85,8 @@
                     </div>
                 </div>
 
-                <div class="project" id="project-2">
-                    <h1 class="project-name">FOXBOT - DISCORD</h1>
+                <div class="project" id="project_2">
+                    <h1 class="project_name">FOXBOT - DISCORD</h1>
                     <p>THERE WILL BE A DESCRIPTION HERE ONCE I FIX THE BOT</p>
                     <div class="links">
                         <!-- <a href=""><h2 class="arrow"> > </h2></a> -->
@@ -94,9 +96,9 @@
                 </div>
             </div>
 
-            <div class="project-row">
-                <div class="project" id="project-3">
-                    <h1 class="project-name">WEB SECURITY DEMONSTRATION</h1>
+            <div class="project_row">
+                <div class="project" id="project_3">
+                    <h1 class="project_name">WEB SECURITY</h1>
                     <p>Test 3</p>
                     <div class="links">
                         <!-- <a href=""><h2 class="arrow"> > </h2></a> -->
@@ -105,8 +107,8 @@
                     </div>
                 </div>
 
-                <div class="project" id="project-4">
-                    <h1 class="project-name">CPSC 457 CODE</h1>
+                <div class="project" id="project_4">
+                    <h1 class="project_name">CPSC 457 CODE</h1>
                     <p>Desc Here</p>
                     <div class="links">
                         <!-- <a href=""><h2 class="arrow"> > </h2></a> -->
