@@ -217,9 +217,10 @@ footer {
     margin-top: 5vh;
     justify-content: center;
     padding: 2vh 0vw;
+    color: black;
 }
 
-#copied_message {
+.copied {
     opacity: 0;
     color: white;
 }
