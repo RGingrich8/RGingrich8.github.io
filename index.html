@@ -19,7 +19,7 @@
         <!-- <div id="scroll-bar"></div> -->
 
         <div id = "header">
-            <a class = "header_link" href = "#introduction">Introduction
+            <a class = "header_link" href = "#about_me">Introduction
             </a>
             <a class = "header_link" href = "#projects_overlay">Projects
             </a>
@@ -79,7 +79,7 @@
                     <h1 class="project_name">VALORANT DUOFINDER</h1>
                     <p>
                         An application to that matches like-minded players for the game Valorant, 
-                        a popular first-person shooter game. The UI was created using REACT, while NodeJS was used
+                        a popular first-person shooter. The UI was created using REACT, while NodeJS was used
                         for handling the backend and allowing players to connect to one another.
                     </p>
                     <div class="links">
@@ -94,7 +94,8 @@
                     <p>
                         A Discord bot capable of searching up song lyrics when given an artist name and song title. It will then
                         return statistics about the song, such as the most common words within the song, the total number of words, 
-                        and how unique the lyrics are. Some other small functionality as well.
+                        and how unique the lyrics are. Also includes other unique features. 
+                        <!-- Unfortunately deprecated after Discord's API update, but the code can still be viewed. -->
                     </p>
                     <div class="links">
                         <!-- <a href=""><h2 class="arrow"> > </h2></a> -->
@@ -110,18 +111,25 @@
                     <p>Test 3</p>
                     <div class="links">
                         <!-- <a href=""><h2 class="arrow"> > </h2></a> -->
+                        <a href="./files/Web Security/"><img class="yt" src="./images/external.png"></a>
                         <a href=""><img class="yt" src="./images/github.png"></a>
                         <a href=""><img class="yt" src="./images/youtube.png"></a>
                     </div>
                 </div>
 
                 <div class="project" id="project_4">
-                    <h1 class="project_name">CPSC 457 CODE</h1>
-                    <p>Desc Here</p>
+                    <h1 class="project_name">C++ THREADING</h1>
+                    <p>
+                        An example of more technically challenging code, these C++ projects showcase threading, barriers,
+                        and optimized code that can take massive inputs and return a result in under 10s. These files
+                        are a great example of well-written and clearly documented code, and are a representation of the standard I hold myself to.
+                        <br> 
+                        To view the files, please request access on GitHub - prevents cheating and plagiarism from current students.
+                    </p>
                     <div class="links">
                         <!-- <a href=""><h2 class="arrow"> > </h2></a> -->
                         <a href=""><img class="yt" src="./images/github.png"></a>
-                        <a href=""><img class="yt" src="./images/youtube.png"></a>
+                        <!-- <a href=""><img class="yt" src="./images/youtube.png"></a> -->
                     </div>
                 </div>
             </div>
@@ -130,16 +138,25 @@
         
         <hr>
 
-        <!-- Add a subtitle to each image, showing the contact info in text -->
+
+        <div id="copied_message">Copied To Clipboard!</div>
         <footer id="contact">
-            <p>Phone number (Canada): </p>
-            <!-- <div> -->
-            <a href=""><img class="yt" src="./images/gmail.png"></a>
-            <p>Email</p>
-            <!-- </div> -->
-            <p>Line ID: </p>
-            <a href=""><img class="yt" src="./images/github.png"></a>
-            <a href=""><img class="yt" src="./images/linkedin.png"></a>
+            <div class="contact_column">
+                <a onclick="copyToClip('phone')"><img class="yt" src="./images/phone.png"></a>
+                <p>+1(403)805-0329</p>
+            </div>
+            <div class="contact_column">
+                <a onclick="copyToClip('email')"><img class="yt" src="./images/gmail.png"></a>
+                <p>richardgingrich8@gmail.com</p>
+            </div>
+            <div class="contact_column">
+                <a href="https://github.com/RGingrich8"><img class="yt" src="./images/github.png"></a>
+                <p>@RGingrich8</p>
+            </div>
+            <div class="contact_column">
+                <a href="https://www.linkedin.com/in/richard-gingrich-9377a5226/"><img class="yt" src="./images/linkedin.png"></a>
+                <p>@Richard Gingrich</p>
+            </div>
         </footer>
 
     </body>

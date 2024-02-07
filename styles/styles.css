@@ -125,6 +125,7 @@ hr {
 
 .yt {
     height: 10vh;
+    /* width: 25%; */
     padding: 0vh 2vw;
 }
 
@@ -141,7 +142,7 @@ hr {
 
 .project {
     width: 50vw;
-    height: 60vh;
+    height: 70vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -185,7 +186,7 @@ hr {
 }
 
 #project_1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("../images/valorant.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("../images/valorant_alt.jpeg");
 }
 
 #project_2 {
@@ -218,7 +219,18 @@ footer {
     padding: 2vh 0vw;
 }
 
+#copied_message {
+    opacity: 0;
+    color: white;
+}
 
+.contact_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin: 2vw; */
+    text-align: center;
+}
 
 
 

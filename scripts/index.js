@@ -39,3 +39,14 @@ function mouseScroll() {
 function detectHover() {
     console.log("Collision detected.");
 }
+
+// Copy information to the clipboard, depending on which icon was pressed
+function copyToClip(icon) {
+    if (icon == "email") {
+        navigator.clipboard.writeText("richardgingrich8@gmail.com");
+    } else if (icon == "phone") {
+        navigator.clipboard.writeText("+1(403)805-0329");
+    }
+
+    document.getElementById("copied_message").style.opacity = 1.0;
+}
