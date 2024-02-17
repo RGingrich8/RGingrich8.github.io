@@ -86,7 +86,7 @@ hr {
     color: white;
     display: flex;
     flex-direction: row;
-    font-size: 2vh;
+    font-size: 3vh;
     margin-top: 5vh;
     margin-left: 1vw;
     margin: 10vh 1vw 10vh;
@@ -151,6 +151,7 @@ hr {
     justify-content: top;
     text-align: center;
     z-index: 1;
+    overflow: auto;
 }
 
 .project:hover {
