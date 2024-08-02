@@ -95,8 +95,8 @@ hr {
 
 #personal_pic {
     border: 2px ridge orange;
-    border-radius: 50%;
-    background: url("../images/professional.jpg") center no-repeat;
+    /* border-radius: 50%; */
+    background: url("../images/professional.png") center no-repeat;
     background-size: cover;
     min-width: 30vw;
     min-height: 50vh;
