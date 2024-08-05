@@ -2,7 +2,7 @@
 
 * {
     max-width: 100%;
-    font-family: Verdana, sans-serif;
+    font-family: Tahoma, sans-serif;
     margin-left: 0;
 }
 
@@ -20,6 +20,15 @@ body {
     background-color: black;
     cursor: url("../images/mouse_basic.png"), auto;
     width: 100vw;
+}
+
+#rotate {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: orange;
+    text-align: center;
+    font-size: 7vh;
 }
 
 
@@ -196,11 +205,11 @@ hr {
 }
 
 #project_3 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("../images/test.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("../images/cpu.jpg");
 }
 
 #project_4 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("../images/test2.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("../images/web.jpg");
 }
 
 .project_row {

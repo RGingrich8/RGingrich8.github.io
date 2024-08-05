@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>CPSC 329 Site Markup - Cookie Poisoning</title>
+</head>
+<body>
+	
+	<h1>Cookie Poisoning</h1>
+	
+	<!--
+	We should have the user enter some dummy login information into a form that vanishes on submission. Then a cookie is added canReadPasswords=0. We show the user how to edit it to canReadPasswords=1 and have the user refresh the page. Then they will be able to see some passwords. On the secured form, we instead store a username and hashed password as cookies. When they edit it, they become an invalid user and are logged out.
+	-->
+	
+	<h2> How to Exploit </h2>
+	
+	<p>Cookies are often saved in your browser when you use almost any website. They are designed to store user settings, like your preferred currency on an online store, so that you do not have to change it to CAD every time you go to that American site (Arampatzis, n. d.). However, they can also be used for login information or permissions. A poorly designed site, like ours, might save a cookie for whether a user has permissions to do a certain action. In our case, by editing the cookies our site saves, you will be able to view a list of passwords. Being able to edit cookies with the ability to bypass security is you performing the act of cookie poisoning.</p>
+	
+	<p>Using username test and password 1234 (obviously not the most secure choices), you can log in to this form. Once you’re logged in, a cookie will be created on your computer.</p>
+	
+	<p>To edit that cookie, right click on the screen and click “Inspect Element”. On Chrome, you want to go under Application, then on the sidebar click “Cookies”. On Firefox, you should go under “Storage” and then “Cookies” in the sidebar. For more details on how to find them, click here fore <a href="https://developer.chrome.com/docs/devtools/storage/cookies/">Chrome</a> or <a href="https://www.digitalcitizen.life/how-view-remove-cookies-mozilla-firefox/">Firefox</a>.</p>
+	
+	<p>The cookie you are looking for is called “canReadPasswords”. The value is currently 0. Change it to 1. Now refresh the page. You should see a bunch of test user accounts with (terrible) passwords. Feel free to log out and log back in as them.</p>
+	
+	<h2> History </h2>
+	
+	<p>In the 1990s, while working on development for NetScape, Lou Montulli created cookies (Hill, 2015). The term comes from the term “magic cookie”, which is a piece of data programmers pass between different parts of code, usually a permission test or unique identifier (Hill, 2015). Cookies were originally used in the Netscape browser to verify if users had been to the NetScape website before, and to save user preferences (Hill, 2015). They were later used to remember items users had left in their shopping carts before leaving an online store.</p>
+	
+	<p>The idea of cookies causing a privacy threat surfaced in 1996 when news organizations caught wind of the fact that cookies were being used without informed consent from browser users (Hill, 2015). Unfortunately, the focus on cookies has detracted from much bigger problems. Other tools like local storage do the same thing as cookies, but for larger data structures, and local storage does not get nearly enough attention (Hill, 2015).</p>
+	
+	<p>Because this attack is so easy to implement, there are no newsworthy cases of its application.</p>
+	
+	<h2> How to Fix </h2>
+	
+	<p>Good developers do not store permissions in cookies. This is what we have done with our fixed solution. Log in with the same credentials (test/1234). Now take another look at your cookies. You will see we saved your username and hashed password, but no canReadPasswords cookie. If you change that username cookie, or the password cookie, and refresh the page, you will find you have automatically been logged out of your account.</p>
+	
+	<h2> Sources </h2>
+	<ul class="sources">
+		<li>Arampatzis, A. (n. d.). What are Cookie Poisoning Attacks? [Blog post]. Retrieved from https://www.venafi.com/blog/what-are-cookie-poisoning-attacks-0.</li>
+
+		<li>Hill, S. (2015, March 29). Are cookies crumbling our privacy? We asked an expert to find out. Digital Trends. Retrieved from https://www.digitaltrends.com.</li>
+	</ul>
+</body>
+</html>

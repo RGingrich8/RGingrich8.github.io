@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="./resources/css/index2.css" type="text/css" rel="stylesheet">
+	<title>CPSC 329 FINAL PROJECT</title>
+	<meta charset="utf-8" />
+</head>
+
+<body>
+	<div class="pagesize">
+		<div class="jumbotron jumbotron-fluid">
+			<h1>CROSS SITE SCRIPTING<br></h1>	
+			<div "container">
+				<a href="index.html">
+					<img src="329websitejumbotron.png" class="main-image">
+				</a>
+				<div class="row justify-content-center">
+					<h3><br>OVERVIEW<Br></h3>
+				</div>
+				
+				<div class="row justify-content-center">
+					<p>Cross-site scripting attacks are the most common types of attacks attempted on websites where they represent 40% of all attacks according to Precise Security. Cross-Site attacks actually target the user’s browser instead of targeting the user themselves. They work by tricking the browser into running a script that is not actually part of the original website which allows the attacker to modify the website content to show the user what they want or even redirect the user to the attacker's website. <br><br></p>
+				</div>
+				
+				<div class="row justify-content-center">
+					<h3><br>HOW TO EXPLOIT<br></h3>
+				</div>
+				
+				<div class="row justify-content-center">
+					<p>
+						Similarly, to how SQL injection works, cross-site scripting (XSS) involves exploiting user input areas to insert code into a site and run that code.<br><br>
+						On our site, we have a comment box which allows posters to use html to design their comments. However, like with SQL injection, we are not going to post just any comment. We are going to include a script. Type the following into the first comment box:<br><br>
+					</p>		
+						<p>&ltimg src=x onerror="alert('Pop-up window via stored XSS');" &gt</p>
+						<!--img src="script_instruction.png"-->
+					<p>
+						The above code will run, and you will be prompted with the message ‘You have been hacked’. A savvy hacker can do this with a much more complicated and malicious script. <br><br>
+					</p>
+	
+				</div>
+				
+				<div class="row justify-content-center">
+					<h3><br>HISTORY<br></h3>
+				</div>
+				
+				<div class="row justify-content-center">
+					<p>
+						In the early days of the internet (the mid-90’s), websites used a lot of frames which showed other pages. One site might have a dedicated page for the main menu, and then add a frame to the top of every page that shows that menu (Grossman, 2006). Then JavaScript enabled “developers to do all sorts of crazy things like image rollovers, mouse followers and pop-up windows” (Grossman, 2006). <br><br>
+						Hackers soon figured out that JavaScript could load a malicious website into one of those frames or into a pop-up window. This site could then “pull data from forms, re-write the page, etc” (Grossman, 2006). Discovery cannot be attributed to a single person, but many people were taking advantage of the new flaws created by the introduction of JavaScript and working around whatever fixes web developers came up with. Like SQL injections, it is still one of the most common website vulnerabilities. According to HackerOne, cross-site scripting was the most common vulnerability exploited on their platform (Ranger, 2017). <br><br>
+						Some notable cross-site scripting attacks include:
+						<ul>
+							<li><a href=https://samy.pl/myspace/tech.html>MySpace in 2005</a>,</li><br>
+							<li><a href=https://www.theregister.com/2008/05/23/facebook_xss_flaw/>Facebook in 2008</a>,</li><br>
+							<li><a href=”https://www.theguardian.com/technology/blog/2010/sep/21/twitter-bug-malicious-exploit-xss “>Twitter in 2010</a>,</li><br>
+							<li><a href=https://hotforsecurity.bitdefender.com/blog/yahoo-accounts-hijacked-via-xss-type-attack-5172.html>Yahoo in 2013</a>, and</li><br>
+							<li><a href=https://www.techrepublic.com/article/british-airways-data-theft-demonstrates-need-for-cross-site-scripting-restrictions/>British Airways in 2018</a>.</li><br>
+						</ul>	
+					</p>
+					<!-- is this included? 
+						The fix here is a little bit more complicated.
+						https://en.wikipedia.org/wiki/Cross-site_scripting--> 
+				</div>
+				
+				<div class="row justify-content-center">
+					<h3><br>HOW TO FIX<br></h3>
+				</div>
+				
+				<div class="row justify-content-center">
+					<p>
+						There are multiple ways to fix this problem. The easiest would be to sanitize the data inputs to remove malicious code. This can be as simple as removing the “script” tags (Vigliarolo, 2018). Another way might be for the site to block third party scripts. The downside of this approach is that it could also inhibit the site’s ability to serve advertisements or collect analytics data.<br><br>
+						We are going to remove the script tags. Try typing the same message into comment box 2. You will see that the comment that appears does not contain the script tags. We have replaced all instances of <img src="script_2.png">
+					</p>
+				</div>
+				
+				<div class="row justify-content-center">
+					<h3>SOURCES</h3>
+				</div>
+				
+				<div class="row justify-content-center">
+					<p>
+						Grossman, J. (2006, July 30). The origins of Cross-Site Scripting (XSS) [Blog post]. Retrieved from https://blog.jeremiahgrossman.com/2006/07/origins-of-cross-site-scripting-xss.html <br><br>
+						Ranger, S. (2017, July 5). At $30,000 for a flaw, bug bounties are big and getting bigger. Zdnet. Retrievd from https://www.zdnet.com/ <br><br>
+						Vigliarolo, B. (2018, December 3). Cross-site scripting attacks: A cheat sheet. Tech Republic. Retrieved from https://www.techrepublic.com/article/cross-site-scripting-attacks-a-cheat-sheet/
+					</p>
+				</div>
+			</div>	
+		</div>
+	</div>
+</body>
+</html>

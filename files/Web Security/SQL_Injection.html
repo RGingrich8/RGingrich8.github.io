@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="./resources/css/index2.css" type="text/css" rel="stylesheet">
+	<title>CPSC 329 FINAL PROJECT</title>
+	<meta charset="utf-8" />
+</head>
+
+<body>
+	<div class="pagesize">
+		<div class="jumbotron jumbotron-fluid">
+			<h1>SQL INJECTION<br></h1>	
+			<div "container">
+				<a href="index.html">
+					<img src="329websitejumbotron.png" class="main-image">
+				</a>
+				<div class="row justify-content-center">
+					<h3></br><br>OVERVIEW</h3>
+				</div>
+				
+				<div class="row justify-content-center">
+					<p>The first type of Attack that we could showcase is the SQL injection attack. A SQL injection attack is when an attacker tries to submit partial or full SQL queries to an HTML form hoping that the query reaches the backend SQL database where the database would process the request and leak the information to the attacker. Although a SQL attack is very simple to attempt it could lead to disastrous consequences where the attacker ends up gaining access to the full database.</br><br></p>
+				</div>
+				
+				<div class="row justify-content-center">
+					<h3>HOW TO EXPLOIT</h3>
+				</div>
+				
+				<div class="row justify-content-center">
+					<p>When you fill out a form online, like a search box, your input must be used on a database. If you are searching for something, then the website must take your input text, scan the database for that text, and then show the results to you. For the sake of an example, let us assume you searched for the phrase ‘cats’. A command in a search database might look something like the following, which searches the database for any occurrence of the word cats:
+						Select * FROM data WHERE * LIKE “%<strong>cats</strong>%” <br><br>
+						Knowing this, we can create a phrase to search for that will break this code and allow us access to write our own commands for the database. Let’s see what happens to that command if we search for the phrase ‘ “; SELET * from passwords; –'. Then, what the server executes is: <br><br>
+						Select * FROM data WHERE * LIKE <strong>“%”; SELECT * FROM passwords; </strong> --%” <br><br>
+						The ‘--' at the end is interpreted as a comment, so the server never sees it or what comes after. The word SELECT also marks the beginning of a new command. What happens, is: <br>
+						<ol>
+							<li> SELECT * FROM data WHERE * LIKE “%”; </li>
+							<li> SELECT * FROM passwords; </li>
+						</ol>
+					</p>
+					<p>
+						Now we have caused the server to add a new command which fetches all the passwords. This is an SQL injection attack. We have “injected” our own command, and probably caused the owner of the website a whole lot of trouble.</br><br>
+					</p>
+				</div>
+				
+				<div class="row justify-content-center">
+					<h3>HISTORY</h3>
+				</div>
+				
+				<div class="row justify-content-center">
+					<p>
+						The earliest recorded documentation of an SQL injection attack was on December 25, 1998, when Jeff Forristal, also known as Rain Forrest Puppy, wrote about the exploit in Phrack, an online cybersecurity magazine. Ironically, Microsoft did not think it was a problem, so programmers should not worry about doing anything to stop it (rain.forest.puppy, 1998).
+						Since then, SQL injection has been among the most common vulnerabilities in websites (Cox, 2015). Still, over two decades later, SQL injection attacks are a common occurrence. Here are some of the most ironic examples of SQL injection attacks over the past two decades:</p>
+					</p>
+					
+					<ul>
+						<li><a href=” https://web.archive.org/web/20100117054540/http://www.xiom.com/whid-2005-46”>Tech Target (a security magazine) in February 2002 </a>,</li><br>
+						<li><a href=” https://web.archive.org/web/20071223181645/http://rcpmag.com/news/article.aspx?editorialsid=8762”>Microsoft UK in June 2007</a>,</li><br>
+						<li><a href=” https://web.archive.org/web/20120718111038/http://www.par-anoia.net/We_Are_Anonymous_Inside_the_Hacker_World_of_LulzSe.pdf”>HBGary (a technology security firm) in February 2011</a>,</li><br>
+						<li><a href=” https://blog.sucuri.net/2011/03/mysql-com-compromised.html”>Mysql.com, the official MySQL homepage, in March 2011</a>,</li><br>
+						<li><a href=” https://www.zdnet.com/article/450000-user-passwords-leaked-in-yahoo-breach/”>Yahoo in July 2012</a>, and the </li><br>
+						<li><a href=”https://web.archive.org/web/20150219165019/http://www.batblue.com/united-nations-internet-governance-forum-breached/”>United Nations Internet Governance Forum in February 2014.</a></li><br>
+					</ul>
+					<p>
+						Finding more examples is not hard. <a href=”https://en.wikipedia.org/wiki/SQL_injection#Examples”>Wikipedia</a> has quite a long list, and it is far from comprehensive.
+						Evidently this attack is still very prevalent and even companies we might think know to protect against it, like Microsoft themselves, fall victim. What is truly surprising then is just how easy it is to fix. </br><br>
+					</p>
+				</div>
+				
+				<div class="row justify-content-center">
+					<h3>HOW TO FIX</h3>
+				</div>
+				
+				<div class="row justify-content-center">
+					<p>
+						The easiest way to fix this problem is to sanitize the inputs. Sanitation is the process of converting an input string (like ‘cats’ or ‘ “; DELETE * from data; –‘) into a string that can be read by the computer as a single string rather than be interpreted as a second command. This is usually done by adding a ‘\’ before quotation marks. With sanitation, ‘ “; DELETE * from data; –‘ becomes ‘ \“; DELETE * from data; –‘. Then, the computer processes it as:
+						SELECT * FROM data WHERE * LIKE “%<strong>\“; DELETE * from data;</strong> –%”
+						This means you would be searching for the phrase “DELETE * from data” rather than running it on the database. <br><br>
+						<!--https://www.netsparker.com/blog/web-security/sql-injection-vulnerability-history/--> 
+					</p>
+				</div>
+				
+				<div class="row justify-content-center">
+					<h3>SOURCES</h3>
+				</div>
+				
+				<div class="row justify-content-center">
+					<p>
+						Rain.forest.puppy. (1998, December 25). ODBC and MS SQL server 6.5. Phrack Magazine. Retrieved from http://phrack.org/issues/54/8.html. <br><br>
+						Cox, Joseph. (2015, November 20). The History of SQL Injection, the Hack That Will Never Go Away. Vice Magazine. Retrieved from https://www.vice.com/en/article/aekzez/the-history-of-sql-injection-the-hack-that-will-never-go-away.<br>
+					</p>
+				</div>
+				
+			</div>	
+		</div>
+	</div>
+</body>
+</html>

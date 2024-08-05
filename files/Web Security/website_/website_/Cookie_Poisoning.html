@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="./resources/css/index2.css" type="text/css" rel="stylesheet">
+	<title>CPSC 329 FINAL PROJECT</title>
+	<meta charset="utf-8" />
+</head>
+
+<body>
+	<div class="pagesize">
+		<div class="jumbotron jumbotron-fluid">
+			<h1>COOKIE POISONING<br></h1>	
+			<div "container">
+				<a href="index.html">
+					<img src="329websitejumbotron.png" class="main-image">
+				</a>
+				<div class="row justify-content-center">
+					<h3><br>OVERVIEW</h3>
+				</div>
+				
+				<div class="row justify-content-center">
+					<p>Since cookies are stored on local machines and not on secure servers, any user is able to edit their own. For example, if a website uses cookies to check if an account has moderator privileges, an attacker could easily trick this website. This leads to unwanted users having access to more on the website than they should. We intend to showcase this by having our website check if a user has the ability to edit the passwords file through cookies.<br><br></p>
+				</div>
+				
+				<div class="row justify-content-center">
+					<h3>HOW TO EXPLOIT</h3>
+				</div>
+				
+				<div class="row justify-content-center">
+					<p>
+						Cookies are often saved in your browser when you use almost any website. They are designed to store user settings, like your preferred currency on an online store, so that you do not have to change it to CAD every time you go to that American site (Arampatzis, n. d.). However, they can also be used for login information or permissions. A poorly designed site, like ours, might save a cookie for whether a user has permissions to do a certain action. In our case, by editing the cookies our site saves, you will be able to view a list of passwords.<br>
+						<!-- https://www.venafi.com/blog/what-are-cookie-poisoning-attacks-0"> -->
+						
+						Using username test and password 1234 (obviously not the most secure choices), you can log in to this form. Once you’re logged in, a cookie will be created on your computer. <br><br>
+						
+						To edit that cookie, right click on the screen and click “Inspect Element”. On Chrome, you want to go under Application, then on the sidebar click “Cookies”. On Firefox, you should go under “Storage” and then “Cookies” in the sidebar. For more details on how to find them, click here for <a href="https://developer.chrome.com/docs/devtools/storage/cookies/">CHROME</a> 
+						or <a href="https://www.digitalcitizen.life/how-view-remove-cookies-mozilla-firefox/">FIREFOX</a> <br><br>
+						
+						The cookie you are looking for is called “canReadPasswords”. The value is currently 0. Change it to 1. Now refresh the page. You should see a bunch of test user accounts with (terrible) passwords. Feel free to log out and log back in as them.<br><br>
+					</p>
+				</div>
+				
+				<div class="row justify-content-center">
+					<h3>HISTORY</h3>
+				</div>
+				
+				<div class="row justify-content-center">
+					<p>
+						In the 1990s, while working on development for NetScape, Lou Montulli created cookies (Hill, 2015). The term comes from the term “magic cookie”, which is a piece of data programmers pass between different parts of code, usually a permission test or unique identifier (Hill, 2015). Cookies were originally used in the Netscape browser to verify if users had been to the NetScape website before, and to save user preferences (Hill, 2015). They were later used to remember items users had left in their shopping carts before leaving an online store. <br><br>
+						The idea of cookies causing a privacy threat surfaced in 1996 when news organizations caught wind of the fact that cookies were being used without informed consent from browser users (Hill, 2015). Unfortunately, the focus on cookies has detracted from much bigger problems. Other tools like local storage do the same thing as cookies, but for larger data structures, and local storage does not get nearly enough attention (Hill, 2015).<br><br>
+					</p>
+				</div>
+				
+				<div class="row justify-content-center">
+					<h3>HOW TO FIX</h3>
+				</div>
+				
+				<div class="row justify-content-center">
+					<p>
+						Good developers do not store permissions in cookies. This is what we have done with our fixed solution. Log in with the same credentials (test/1234). Now take another look at your cookies. You will see we saved your username and hashed password, but no canReadPasswords cookie. If you change that username cookie, or the password cookie, and refresh the page, you will find you have automatically been logged out of your account.<br><br>
+					</p>
+				</div>
+				
+				<div class="row justify-content-center">
+					<h3>SOURCES</h3>
+				</div>
+				
+				<div class="row justify-content-center">
+					<p>Arampatzis, A. (n. d.). What are Cookie Poisoning Attacks? [Blog post]. Retrieved from https://www.venafi.com/blog/what-are-cookie-poisoning-attacks-0. <br><br>
+					
+						Hill, S. (2015, March 29). Are cookies crumbling our privacy? We asked an expert to find out. Digital Trends. Retrieved from https://www.digitaltrends.com.<br>
+						{https://www.digitaltrends.com/computing/history-of-cookies-and-effect-on-privacy/} 
+					</p>
+				</div>
+				
+			</div>	
+		</div>
+	</div>
+</body>
+</html>
