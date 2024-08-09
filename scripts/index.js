@@ -6,14 +6,15 @@ const URL_ALT = "https://rgingrich8.github.io";
 
 // Run
 main();
+// Will add a future check that asks users to rotate their mobile devices/resize the browser window (replace entire window with black bg and orange text)
+// window.addEventListener('resize', checkWindowSize);
 
 // Control Flow
 function main() {
     console.log("JavaScript loaded successfully.");
-    // if window.width < ... {
-    // doc.getElem("hello").replace("please rotate your phone for a better experience");
-    // doc.getElem(restOfBody).replace(black screen)
-    //}
+    if (window.innerWidth < 1500) {
+        alert("Please rotate your mobile device for the optimal experience.");  // Temporary fix, alert users 
+    }
 }
 
 // Copy contact information to the clipboard, depending on which icon was pressed
@@ -25,6 +26,11 @@ function copyToClip(icon) {
         navigator.clipboard.writeText("richardgingrich8@gmail.com");
         document.getElementById("copied_message_2").style.animation = "appear 1s";
     }
+}
+
+// For mobile devices, or if the pc screen is too small
+function checkWindowSize() {
+    console.log(window.innerWidth);
 }
 
 
