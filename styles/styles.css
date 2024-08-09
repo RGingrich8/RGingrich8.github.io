@@ -109,8 +109,8 @@ hr {
     background-size: cover;
     min-width: 30vw;
     min-height: 50vh;
+    /* max-height: 50vh; */
     margin-left: 1vw;
-    /* height: 40vh; */
 }
 
 
@@ -123,13 +123,16 @@ hr {
     /* padding: 0px; */
     margin: 0px;
     width: 100vw;
+    position: relative;
 }
 
 .links {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 10vh;
+    position: absolute;
+    margin-top: 45vh;
+    align-self: center;
 }
 
 .yt {

@@ -10,6 +10,10 @@ main();
 // Control Flow
 function main() {
     console.log("JavaScript loaded successfully.");
+    // if window.width < ... {
+    // doc.getElem("hello").replace("please rotate your phone for a better experience");
+    // doc.getElem(restOfBody).replace(black screen)
+    //}
 }
 
 // Copy contact information to the clipboard, depending on which icon was pressed
