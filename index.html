@@ -14,137 +14,67 @@
         
         <!-- Small script, load first -->
         <script type="text/javascript" src="./scripts/index.js"></script>
-
-        <!-- <div id = "rotate">
-            <p>Please rotate your device to experience this website.</p>
-        </div> -->
-
-        <div id = "header">
-            <a class = "header_link" href = "#about_me">Introduction
-            </a>
-            <a class = "header_link" href = "#projects_overlay">Projects
-            </a>
-            <a class = "header_link" href = "#contact">Contact Information
-            </a>
+        <div id="intro">
+            <a href="./index.html"><img id="logo" src="./images/icon_large.png"></a>
+            <p id="title">Richard Gingrich</p>
         </div>
-
-        <hr>
-
         
 
-        <div id="introduction">
-            <div id="text_intro">
-                <p>Hello!</p>
-                <!-- <img src="./images/icon_large.png"> -->
-            </div>  
-            
-            <hr>
-        </div>
 
         <div id="about_me">
-            <div>
-                <p> 
-                    <p style="color:orange">Whom it may interest,</p> <br>
-
-                    My name is Richard Gingrich and I am a graduate from the University of Calgary, recently obtaining a Bachelor of Science in Computer Science.
-                    My areas of interest lie in application development, web development (fullstack), and general IT. I have provided some examples of my work on this page, and
-                    am able to provide more upon request. 
+            <div> 
+                <!-- <img src="./images/uofc.png"> -->
+                <!-- <img src="./images/teacherrecord.png"> -->
+                <p>
+                    Bachelor of Science in Computer Science (4-year program) <br>
+                    TEFL Certificate (120-hour) <br>
+                    I have many years (5+) of experience with HTML/JS/CSS, Python, Java, and C++
                     <br><br>
-                    
-                    Although I consider myself to be quite proficient at HTML/JS/CSS, Python, Java, and C++, I realise that there is always more to be learned. I am excited to engage with 
-                    new concepts and systems. Another strength of mine is communication, whether it be written or verbal. 
-                    I am able to ask for help when needed, and can communicate my ideas effectively. 
-
-                    <br><br>
-
-                    Outside of work interests, I very much enjoy travelling and sports. It is a goal of mine to explore as much of this wonderful world as possible,
-                    and it is important for me to feel as though I am contributing to making the world a better place. I want my work to grant something
-                    of value, which will in turn help me to be fulfilled. 
-
-                    I am a very passionate person and would love to hear back from you!
-
-                    <br><br>
-
                     My Computer Science resume can be found <a href="./files/Richard Gingrich - Application.pdf" target="_blank">here</a> <br>
-                    A copy of my general resume <a href="./files/Regular Resume - September 2024.pdf" target="_blank">here</a> <br>
-
-                    <p style="color:orange">Please enjoy some of my projects below!</p>
+                    A copy of my general resume <a href="./files/Regular Resume - 2024.pdf" target="_blank">here</a> <br>
                 </p>
             </div>
-
-            <div id="personal_pic"></div>
         </div>
 
         <hr>
-        <br>
 
-        <div id="projects_overlay">
+        <div id="projects">
             
-            <div class="project_row">
-                
-                <div class="project" id="project_1">
-                    <h1 class="project_name">VALORANT DUOFINDER</h1>
-                    <p>
-                        An application to that matches like-minded players for the game Valorant, 
-                        a popular first-person shooter. The UI was created using REACT, while NodeJS and MongoDB were used
-                        for handling the backend and allowing players to connect to one another. 
-                    </p>
-                    <div class="links">
-                        <a href="https://github.com/RGingrich8/Valorant-Duofinder" target="_blank"><img class="yt" src="./images/github.png"></a>
-                        <a href="https://youtu.be/-ERkpphJ1d8" target="_blank"><img class="yt" src="./images/youtube.png"></a>
-                    </div>
-                </div>
-
-                <div class="project" id="project_2">
-                    <h1 class="project_name">FOXBOT - DISCORD</h1>
-                    <p>
-                        Created in Python, a Discord bot that is capable of searching up song lyrics when given an artist name and song title. It will then
-                        return statistics about the song, such as the most common words within the song, the total number of words, 
-                        and how unique the lyrics are.
-                        <!-- <br><br> -->
-                        Unfortunately deprecated after Discord's API update, but the code can be viewed and the bot may still be added to servers.
-                    </p>
-                    <div class="links">
-                        <a href="https://discord.com/api/oauth2/authorize?client_id=729619959969218581&permissions=274877975552&scope=bot" target="_blank"><img class="yt" src="./images/external.png"></a>
-                        <a href="https://github.com/RGingrich8/FoxBot" target="_blank"><img class="yt" src="./images/github.png"></a>
-                    </div>
+            <div class="project" id="project_1">
+                <p>Valorant Duofinder</p>
+                <div class="links">
+                    <a href="https://github.com/RGingrich8/Valorant-Duofinder" target="_blank"><img class="yt" src="./images/github.png"></a>
+                    <a href="https://youtu.be/-ERkpphJ1d8" target="_blank"><img class="yt" src="./images/youtube.png"></a>
                 </div>
             </div>
 
-            <div class="project_row">
-                <div class="project" id="project_3">
-                    <h1 class="project_name">C++ THREADING</h1>
-                    <p>
-                        An example of more technically challenging code, these C++ projects showcase threading, barriers,
-                        and optimized code that can take massive inputs and return a result in under 10s. These files
-                        are a great example of well-written and clearly documented code, and are a representation of the standard I hold myself to.
-                        <br><br>
-                        To view the files, please request access via email - prevents cheating and plagiarism from current students.
-                    </p>
-                    <div class="links">
-                        <a href="https://github.com/RGingrich8/cpp-demo" target="_blank"><img class="yt" src="./images/github.png"></a>
-                    </div>
-                </div>
-
-                <div class="project" id="project_4">
-                    <h1 class="project_name">WEB SECURITY</h1>
-                    <p>
-                        A demonstration of 3 common web attacks - cookie poisoning, cross-site scripting, and SQL injection. Informative pages provide background of 
-                        each of the attacks, which were then recreated for the user to try for themselves. Please note that some modern browsers have built-in protections,
-                        such as Chrome blocking any potential cross-site scripts by default. 
-                        <br><br>
-                        My role in this project was to create and showcase the scripting attacks, as well as how to safeguard a site from such intrusions.
-                    </p>
-                    <div class="links">
-                        <a href="./files/Web Security/index.html" target="_blank"><img class="yt" src="./images/external.png"></a>
-                        <a href="https://github.com/RGingrich8/Web-Security" target="_blank"><img class="yt" src="./images/github.png"></a>
-                        <a href="https://youtu.be/OMC4A2bmSOM" target="_blank"><img class="yt" src="./images/youtube.png"></a>
-                    </div>
+            <div class="project" id="project_2">
+                <p>FoxBot - Discord</p>
+                <div class="links">
+                    <a href="https://discord.com/api/oauth2/authorize?client_id=729619959969218581&permissions=274877975552&scope=bot" target="_blank"><img class="yt" src="./images/external.png"></a>
+                    <a href="https://github.com/RGingrich8/FoxBot" target="_blank"><img class="yt" src="./images/github.png"></a>
                 </div>
             </div>
-            
+
+            <div class="project" id="project_3">
+                <p>C++ Threading</p>
+                <div class="links">
+                    <a href="https://github.com/RGingrich8/cpp-demo" target="_blank"><img class="yt" src="./images/github.png"></a>
+                </div>
+            </div>
+
+            <div class="project" id="project_4">
+                <p>Web Security</p>
+                <div class="links">
+                    <a href="./files/Web Security/index.html" target="_blank"><img class="yt" src="./images/external.png"></a>
+                    <a href="https://github.com/RGingrich8/Web-Security" target="_blank"><img class="yt" src="./images/github.png"></a>
+                    <a href="https://youtu.be/OMC4A2bmSOM" target="_blank"><img class="yt" src="./images/youtube.png"></a>
+                </div>
+            </div>
+
+
         </div>
-        
+
         <hr>
 
 
@@ -162,12 +92,10 @@
             <div class="contact_column">
                 <a href="https://github.com/RGingrich8" target="_blank"><img class="yt" src="./images/github.png"></a>
                 <p>@RGingrich8</p>
-                <div class="copied">Copied To Clipboard</div>
             </div>
             <div class="contact_column">
                 <a href="https://www.linkedin.com/in/rgingrich" target="_blank"><img class="yt" src="./images/linkedin.png"></a>
                 <p>@Richard Gingrich</p>
-                <div class="copied">Copied To Clipboard</div>
             </div>
         </footer>
 

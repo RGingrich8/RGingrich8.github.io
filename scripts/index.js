@@ -12,9 +12,10 @@ main();
 // Control Flow
 function main() {
     console.log("JavaScript loaded successfully.");
-    if (window.innerWidth < 1500) {
-        alert("Please rotate your mobile device for the optimal experience.");  // Temporary fix, alert users 
-    }
+    alert("This page is being restructured. It will be completed by October 8, 2024.")
+    // if (window.innerWidth < 1500) {
+    //     alert("Please rotate your mobile device for the optimal experience.");  // Temporary fix, alert users 
+    // }
 }
 
 // Copy contact information to the clipboard, depending on which icon was pressed
