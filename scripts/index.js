@@ -12,7 +12,7 @@ main();
 // Control Flow
 function main() {
     console.log("JavaScript loaded successfully.");
-    alert("This page is being restructured. It will be completed by October 8, 2024.")
+    alert("This page is being restructured. It will be completed by October 11, 2024.")
     // if (window.innerWidth < 1500) {
     //     alert("Please rotate your mobile device for the optimal experience.");  // Temporary fix, alert users 
     // }
