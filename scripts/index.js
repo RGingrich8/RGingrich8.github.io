@@ -1,6 +1,6 @@
 // Global Vars and Constants
-const URL = "https://rgingrich8.github.io/";
-const URL_ALT = "https://rgingrich8.github.io";
+const URL = "https://rgingrich8.github.io";
+const URL_ARCHIVE = "https://rgingrich8.github.io/archive"
 // let globalX = 0;
 // let globalY = 0;
 
@@ -12,7 +12,10 @@ main();
 // Control Flow
 function main() {
     console.log("JavaScript loaded successfully.");
-    alert("This page is being restructured. It will be completed soon.")
+    console.log(window.location.href);
+    if (window.location.href == URL || window.location.href == URL + "/" || window.location.href == URL + "/index.html") {
+        alert("This page is being restructured. It will be completed soon.");
+    }
     // if (window.innerWidth < 1500) {
     //     alert("Please rotate your mobile device for the optimal experience.");  // Temporary fix, alert users 
     // }

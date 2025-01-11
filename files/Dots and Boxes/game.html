@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta name = "viewport" content = "width=1920, height=1080, initial-scale=1">
+	<title>Dots and Boxes</title>
+    <link rel = "icon" type = "image/x-icon" href = "./images/favicon.ico">
+    <link rel = "stylesheet" type = "text/css" href= "./styles/styles.css">
+</head>
+
+
+<body>
+
+	<!-- <p1>Dots and Boxes</p1> -->
+
+	<div id = score>
+		<p1>Dots and Boxes</p1>
+		<br>
+		<!-- score here -->
+		<!-- also reset button here -->
+		<p2 id = "p1">Player 1: 0</p2>
+		<p2 id = "p2">Player 2: 0</p2>
+		<p2 id = "p3">Player 3: 0</p2>
+		<hr>
+	</div>
+
+	<div id = "gameboard">
+		
+		<div class = "dot"><button class = "hline"></button><button class = "vline"></button></div>
+		<div class = "dot"><button class = "hline"></button><button class = "vline"></button></div>
+		<div class = "dot"><button class = "hline"></button><button class = "vline"></button></div>
+		<div class = "dot">-<button class = "vline"></button></div>
+		<div class = "dot"><button class = "hline"></button><button class = "vline"></button></div>
+		<div class = "dot"><button class = "hline"></button><button class = "vline"></button></div>
+		<div class = "dot"><button class = "hline"></button><button class = "vline"></button></div>
+		<div class = "dot">-<button class = "vline"></button></div>
+		<div class = "dot"><button class = "hline"></button><button class = "vline"></button></div>
+		<div class = "dot"><button class = "hline"></button><button class = "vline"></button></div>
+		<div class = "dot"><button class = "hline"></button><button class = "vline"></button></div>
+		<div class = "dot">-<button class = "vline"></button></div>
+		<div class = "dot"><button class = "hline"></button></div>
+		<div class = "dot"><button class = "hline"></button></div>
+		<div class = "dot"><button class = "hline"></button></div>
+		<div class = "dot"></div>
+
+	</div>
+
+	<div id="up_next"></div>
+
+	<br>
+	<hr>
+
+	<div class = "controls">
+		<!-- Add reset button -->
+		<a href = "./game.html"><p>Restart Game</p></a>
+		<a href = "./index.html"><p>Main Menu</p></a>
+		<!--  -->
+	</div>
+
+	<!-- Set further down, let rest of page load first -->
+	<script type="text/javascript" src="./scripts/index.js"></script>
+</body>
+
+
+</html>

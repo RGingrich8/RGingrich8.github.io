@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta name = "viewport" content = "width=1920, height=1080, initial-scale=1">
+	<title>Dots and Boxes</title>
+    <link rel = "icon" type = "image/x-icon" href = "./images/favicon.ico">
+    <link rel = "stylesheet" type = "text/css" href= "./styles/styles.css">
+</head>
+
+
+<body>
+
+	<!-- <script type="text/javascript" src="./scripts/index.js"></script> -->
+
+	<p class = "title">SETTINGS</p>
+	<hr>
+
+	<!-- Allow for changing of the colours used by players in-game -->
+	<div id = "select_colour">
+		<!-- <p>COLOUR SCHEME</p> -->
+		<!-- <label for="colour_scheme">COLOUR SCHEME</label> -->
+		<select id = "colour_scheme" required onchange="controlColours()">
+			<option value="rgb">RGB (Default)</option>
+			<option value="neon">Neon</option>
+			<option value="cremes">Cremes</option>
+			<option value="sea">Sea to Sky</option>
+			<option value="sunrise">Sunrise</option>
+			<option value="forest">Forest</option>
+		</select>
+	
+
+		<!-- These are changed based on what the user selects -->
+		<div id = "format_colours">
+			<div id = "c1"></div>
+			<div id = "c2"></div>
+			<div id = "c3"></div>
+		</div>
+	</div>
+
+	<hr>
+	
+	<!-- <div id = "format_names">
+		<p>PLAYER 1 NAME</p>
+		<input type="" id="" placeholder="Player 1">
+		<p>PLAYER 2 NAME</p>
+		<input type="" name="" placeholder="Player 2">
+		<p>PLAYER 3 NAME</p>
+		<input type="" name="" placeholder="Player 3">
+	</div> -->
+
+
+
+
+	<div class="controls">
+		<a href="./game.html"><p>START GAME</p></a>
+		<!-- <a href="./index.html"><p>MAIN MENU</p></a> -->
+	</div>
+	
+
+	<!-- Set further down, let rest of page load first -->
+	<script type="text/javascript" src="./scripts/index.js"></script>
+</body>
+
+
+</html>
