@@ -11,8 +11,7 @@ main();
 
 // Control Flow
 function main() {
-    console.log("JavaScript loaded successfully.");
-    console.log(window.location.href);
+    console.log("JavaScript loaded successfully for page: " + window.location.href);
     if (window.location.href == URL || window.location.href == URL + "/" || window.location.href == URL + "/index.html") {
         alert("This page is being restructured. It will be completed soon.");
     }

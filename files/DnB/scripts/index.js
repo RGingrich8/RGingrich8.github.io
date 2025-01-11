@@ -1,7 +1,6 @@
 // Global Var Setup
 const NO_OF_LINES = 24;
-const URL = "https://rgingrich8.github.io/";
-const URL_ALT = "https://rgingrich8.github.io";
+const URL = "https://rgingrich8.github.io/files/DnB";
 
 // let firstTimeSetup = true;
 let playerTurn = 1;
@@ -28,7 +27,7 @@ function main() {
 	
 	// Set up cookies on homepage
 	// if (window.location.pathname.includes("index.html") || !(window.location.pathname.includes("/"))) {
-	if (window.location.href == URL || window.location.href == URL_ALT || window.location.href == URL + "index.html") {
+	if (window.location.href == URL || window.location.href == URL + "/" || window.location.href == URL + "/index.html") {
 		console.log(window.location.href);
 		document.cookie = "c1 = " + "rgb(235, 50, 50)";
 		document.cookie = "c2 = " + "rgb(50, 235, 50)";
