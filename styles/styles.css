@@ -41,6 +41,7 @@ body {
 #contact p {
     font-size: 0.8rem;
     max-width: 14vw;
+    overflow-x: hidden;
 }
 
 #contact a {
