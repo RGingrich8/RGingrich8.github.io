@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
+    
     <head>
     	<title>Richard Gingrich</title>
         <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
@@ -12,25 +13,28 @@
     </head>
 
 
-    
     <body>
         
-        <div id="sidebar">
-            <div id="sidebar_links">
-                <a href="./index.html"><div style="background-color: #a2a2c3;"><img src="./images/icon_large.png"></div></a>
-                <a href="./work.html"><div><img src="./images/history.png"></div></a>
-                <a href="./index.html"><div><img src="./images/education.png"></div></a>
-            </div>
-            <div id="contact">
-                <a href="mailto:richardgingrich8@gmail.com"><p>richardgingrich8@gmail.com</p></a>
-                <a href="https://github.com/RGingrich8" target="_blank"><p>GitHub</p></a>
-                <a href="https://www.linkedin.com/in/rgingrich" target="_blank"><p>LinkedIn</p></a>
-            </div>
-        </div>
+        <div id="grid_layout">
 
-        <div id="main">
-            <p id="main_title">Richard Gingrich</p>
-            <p id="main_description">Web Design - Database Management - Data Analysis - IT</p>
+            <div id="sidebar">
+                <div id="sidebar_links">    
+                    <a href="https://github.com/RGingrich8" target="_blank"><div><img src="./images/github.png"></div></a>
+                    <a href="https://www.linkedin.com/in/rgingrich" target="_blank"><div><img src="./images/linkedin.png"></div></a>
+                    <a href="mailto:richardgingrich8@gmail.com" target="_blank"><div><img src="./images/gmail.png"></div></a>
+                </div>
+                <div id="sidebar_contact">
+                    <p>richardgingrich8@gmail.com</p>
+                    <p>phone number here</p>
+                </div>
+            </div>
+            
+            <div id="introduction">
+                <p id="main_title">Richard Gingrich</p>
+                <p id="main_description">Web Design - Database Management - Data Analysis - IT</p>
+            </div>
+
+            <!-- <p id="resumes" class="dropdown">Dropdown</p> -->
             <div id="resume_section">
                 <div class="resumes">
                     <img id="resume_cpsc" src="./images/files.png">
@@ -41,6 +45,11 @@
                     <p>General Resume</p>
                 </div>
             </div>
+
+            <p id="work" class="dropdown">Education and Work Experience</p>
+
+            <p id="projects" class="dropdown">Projects</p>
+
         </div>
 
         <!-- Load script -->
