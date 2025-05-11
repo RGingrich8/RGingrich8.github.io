@@ -4,6 +4,7 @@
     --primary-col: rgb(30, 34, 31);
     --secondary-col: #374243;
     --tert-col: #5EFC8D;
+    --highlights: rgb(59, 66, 60);
 }
 
 body {
@@ -73,18 +74,26 @@ body {
 
 .dropdown {
     width: 100%;
-    background-color: var(--tert-col);
+    position: relative;
+    background-color: var(--secondary-col);
     animation: fade_in 2s;
     align-content: center;
     margin: 0;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid var(--tert-col);
+    border-bottom: 1px solid var(--tert-col);
     user-select: none;
+    transition: background-color 0.5s;
 }
 
 .dropdown:hover {
-    background-color: lightyellow;
+    background-color: var(--tert-col);
     cursor: pointer;
+}
+
+.dropdown_sign {
+    max-width: 15px;
+    padding: 0vh 2vw;
+    filter: invert();
 }
 
 #introduction {
@@ -163,6 +172,13 @@ body {
     /* grid-column: 2;
     grid-row: 3; */
     grid-area: wk;
+}
+
+#work_content {
+    grid-area: wk;
+    position: absolute;
+    top: 0;
+    display: none;
 }
 
 #projects {
