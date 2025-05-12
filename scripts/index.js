@@ -2,24 +2,44 @@
 function main() {
     console.log("index.js loaded successfully.");
     alert("This website is being restructured. It will be completed by May 17, 2025.");
+    set_event_listeners();
 }
 
 
 /**
- * Sets an element's event listener
- * @param {*} obj_id            The id of the DOM element that requires the listener
- * @param {*} event_type        The triggering event type (eg. "input", "click", etc)
- * @param {*} listener_func     The listener function
- * @param {array} listener_args The optional array of arguments that should be passed into the listener function
+ * 
+ * @param {*} id The dropdown's id
+ * @param {*} content_id The content's id
  */
-function set_event_listeners(obj_id, event_type, listener_func, listener_args) {
+function dropdown_toggle(id, content_id) {
+    
+    let drop = document.getElementById(id);
+    let sign = drop.firstChild;
+    let content = document.getElementById(content_id);
 
-    if (listener_args) {
-        document.getElementById(obj_id).addEventListener(event_type, function() {
-            listener_func(listener_args);
-        });
+    drop.classList.toggle("dropdown_open");                         // Dropdown toggled between open and closed
+
+    if (content.style.height == "0px") {
+        content.style.height = content.scrollHeight + 100 + "px";
+        sign.src = "./images/minus.png";
     } else {
-        document.getElementById(obj_id).addEventListener(event_type, listener_func);
+        content.style.height = "0px";
+        sign.src = "./images/plus.png";
+    }
+}
+
+
+/**
+ * Set up DOM objects' listeners
+ */
+function set_event_listeners() {
+    
+    let dropdowns = document.getElementsByClassName("dropdown");
+    
+    for (let x = 0; x < dropdowns.length; x++) {
+        dropdowns[x].addEventListener("click", function() {
+            dropdown_toggle(dropdowns[x].id, dropdowns[x].id + "_content");
+        });
     }
 
 }
