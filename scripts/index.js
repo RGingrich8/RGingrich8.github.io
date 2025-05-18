@@ -1,7 +1,7 @@
 // Control Flow
 function main() {
     console.log("index.js loaded successfully.");
-    // alert("This website is being restructured. It will be completed by May 26, 2025.");
+    alert("This website is being restructured. It will be completed by May 26, 2025.");
     set_event_listeners();
 }
 
