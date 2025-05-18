@@ -107,6 +107,7 @@ body {
 #main_title {
     font-weight: bold;
     font-size: 3rem;
+    text-align: center;
     /* height: 20%; */
     animation: fade_in 0.5s;
 }
@@ -138,6 +139,7 @@ body {
 .resumes {
     align-self: center;
     justify-items: center;
+    text-align: center;
     width: 100%;
     transition: background-color 1s;
     border: 1px solid var(--secondary-col);
@@ -191,28 +193,49 @@ body {
     justify-self: center;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    /* background-color: var(--tert-col); */
     /* background-color: var(--highlights); */
     /* margin: 2vh 0vw; */
     width: 100%;
     height: 100%;
 }
 
-#work_content_inner div {
+#work_content_education, #work_content_work {
     width: 50%;
-    background-color: var(--highlights);
+    height: 100%;
+    /* overflow-y: auto; */
     display: flex;
     flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    border-right: 1px double var(--secondary-col);
 }
 
 .education {
     display: flex;
     flex-direction: row;
+    padding: 2vh 2vw;
     /* width: 100%; */
+    background-color: var(--highlights);
+    margin: 1vh 1vw;
 }
 
 .education img {
-    width: 30%;
+    width: 20%;
+    flex-shrink: 0;
+    align-items: flex-start;
+    /* height: auto; */
+    /* object-fit: cover; */
+}
+
+.education p {
+    margin: 0vh 2vw;
+    /* flex-shrink: 2; */
+}
+
+#teacherrecord {
+    border-radius: 50%;
 }
 
 
@@ -232,7 +255,20 @@ body {
 
 /* Media Queries and Responsiveness */
 
-@media (width < 1070px) {
+@media (width <= 1045px) {
+    #main_description {
+        font-size: 1.1rem;
+    }
+    #sidebar_contact {
+        display: none;
+    }
+    .resumes {
+        font-size: 0.8rem;
+        scale: 0.8;
+    }
+}
+
+@media (width <= 618px) {
     #grid_layout {
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -242,21 +278,35 @@ body {
             "wk"
             "pr";
     }
-    #introduction p {
-        font-size: 1rem;
+    #main_title {
+        font-size: 1.3rem;
+    }
+    #main_description {
+        font-size: 0.9rem;
     }
     #sidebar {
         flex-direction: row;
+        justify-content: center;
         columns: 1 / span 1;
+        height: 10vh;
     }
     #sidebar_links {
         display: flex;
         flex-direction: row;
     }
+    #sidebar_links img {
+        max-height: 10vh;
+    }
+    #resume_section a {
+        width: 100%;
+    }
+    .resumes p {
+        font-size: 0.7rem;
+    }
 }
 
-/* grid-template-areas: 
-        "sb in"
-        "sb re"
-        "sb wk"
-        "sb pr"; */
+/* @media (width <= 280px) {
+    #rotate {
+
+    }
+} */
