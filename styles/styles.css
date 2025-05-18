@@ -1,10 +1,10 @@
 /* General Document Setup */
 
 :root {
-    --primary-col: rgb(30, 34, 31);
-    --secondary-col: #374243;
-    --tert-col: #2fc05a;
-    --highlights: rgb(59, 66, 60);
+    --highlights: rgb(30, 34, 31);
+    --primary-col: #374243;
+    --secondary-col: #2fc05a;
+    --tert-col: #278342;
 }
 
 body {
@@ -14,7 +14,7 @@ body {
     font-family: "Sansation", sans-serif;
     max-width: 100vw;
     color: white;
-    background-color: var(--secondary-col);
+    background-color: var(--primary-col);
 }
 
 
@@ -24,9 +24,8 @@ body {
     display: grid;
     grid-template-columns: 10% 1fr;
     width: 100%;
-    height: 100vh;
+    height: auto;
     gap: 0rem;
-    /* justify-items: center; */
     grid-template-areas: 
         "sb in"
         "sb re"
@@ -35,15 +34,18 @@ body {
 }
 
 #sidebar {
-    max-height: 100vh;
+    height: 100vh;
     width: 100%;
     grid-area: sb;
-    background-color: var(--primary-col);
+    background-color: var(--highlights);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
     z-index: 1000;
+    position: sticky;
+    top: 0;
+    align-self: start;
 }
 
 #sidebar img {
@@ -59,34 +61,30 @@ body {
 #sidebar_contact {
     max-width: 100%;
     font-size: 0.7rem;
-    color: var(--tert-col);
+    color: var(--secondary-col);
 }
 
 .dropdown {
     width: 100%;
     height: 100px;
     /* position: relative; */
-    background-color: var(--secondary-col);
+    background-color: var(--tert-col);
     animation: fade_in 2s;
     align-content: center;
     margin: 0;
-    border-top: 1px solid var(--tert-col);
-    border-bottom: 1px solid var(--tert-col);
+    border-top: 1px solid var(--secondary-col);
+    border-bottom: 1px solid var(--secondary-col);
     user-select: none;
     transition: background-color 0.5s;
 }
 
-/* .dropdown div p {
-    animation: fade_in 3s;
-} */
-
 .dropdown:hover {
-    background-color: var(--tert-col);
+    background-color: var(--secondary-col);
     cursor: pointer;
 }
 
 .dropdown_open {
-    background-color: var(--tert-col);
+        background-color: var(--secondary-col);
 }
 
 .dropdown_sign {
@@ -116,17 +114,15 @@ body {
 }
 
 #resume_section {
-    /* grid-column: 2; */
-    /* grid-row: 2; */
     grid-area: re;
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-evenly;
     animation: fade_in 2s;
-    /* height: 60%; */
     align-content: center;
     font-size: 1.4rem;
+    padding: 5vh 0vw;
 }
 
 #resume_section a {
@@ -135,25 +131,14 @@ body {
     color: white;
 }
 
-#resume_cpsc, #resume_general {
-    /* border-top: 1px solid var(--tert-col);
-    border-bottom: 1px solid var(--tert-col); */
-    border: 1px solid var(--tert-col);
-    padding: 2vh 0vw;
-    box-shadow: 5px 5px var(--primary-col);
-}
-
-#resume_cpsc:hover, #resume_general:hover {
-    background-color: var(--tert-col);
-    transform: scale(1.1);
-
-}
-
 .resumes {
     align-self: center;
     justify-items: center;
     width: 100%;
     transition: background-color 1s;
+    border: 1px solid var(--secondary-col);
+    padding: 2vh 0vw;
+    box-shadow: 5px 5px var(--highlights);
 }
 
 .resumes img {
@@ -163,12 +148,25 @@ body {
     filter: invert();
 }
 
+.resumes:hover {
+    background-color: var(--secondary-col);
+    transform: scale(1.1);
+
+}
+
+.position_in_grid {
+    position: relative;
+}
+
 #work {
     grid-area: wk;
 }
 
 #work_content {
     grid-area: wk;
+    display: relative;
+    top: 0;
+    overflow: hidden;
 }
 
 #projects {
