@@ -208,6 +208,7 @@ body {
 .education {
     display: flex;
     flex-direction: row;
+    /* width: 100%; */
 }
 
 .education img {
